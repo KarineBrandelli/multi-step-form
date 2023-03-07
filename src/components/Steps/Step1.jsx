@@ -15,7 +15,7 @@ export const Step1 = () => {
           </label>
 
           <input
-            className="p-4 mt-2 rounded-lg font-medium border-2 border-gray-light outline-none focus:outline-none focus:border-blue-marine"
+            className="p-4 mt-2 rounded-lg font-medium border-2 border-gray-light outline-none focus:outline-none focus:border-blue-marine transition focus:duration-500 ease-in-out"
             id="name"
             type="text"
             placeholder="Stephen Hawking" />
@@ -25,7 +25,7 @@ export const Step1 = () => {
           <label htmlFor="email" className="text-lg">Email Address</label>
 
           <input
-            className="p-4 mt-2 rounded-lg font-medium border-2 border-gray-light outline-none focus:outline-none focus:border-blue-marine"
+            className="p-4 mt-2 rounded-lg font-medium border-2 border-gray-light outline-none focus:outline-none focus:border-blue-marine transition focus:duration-500 ease-in-out"
             id="email"
             type="text"
             placeholder="stephenhawking@email.com" />
@@ -35,7 +35,7 @@ export const Step1 = () => {
           <label htmlFor="phone" className="text-lg">Phone Number</label>
 
           <input
-            className="p-4 mt-2 rounded-lg font-medium border-2 border-gray-light outline-none focus:outline-none focus:border-blue-marine"
+            className="p-4 mt-2 rounded-lg font-medium border-2 border-gray-light outline-none focus:outline-none focus:border-blue-marine transition focus:duration-500 ease-in-out"
             id="phone"
             type="text"
             placeholder="54 91234 5678" />
