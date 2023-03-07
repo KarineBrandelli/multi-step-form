@@ -3,7 +3,7 @@ import { sidebar } from "./sidebar";
 export const Sidebar = () => {
   return (
     <div className="h-full w-80">
-      <div className="bg-[url('../../../assets/bg-sidebar-desktop.svg')] bg-center h-full bg-no-repeat bg-cover rounded-xl">
+      <div className="bg-[url('../../src/assets/bg-sidebar-desktop.svg')] bg-center h-full bg-no-repeat bg-cover rounded-xl">
         <ul className="pt-10 pl-8 pr-2 text-white text-lg">
           {sidebar.map((item, index) => (
             <li key={index} className="mb-8">
