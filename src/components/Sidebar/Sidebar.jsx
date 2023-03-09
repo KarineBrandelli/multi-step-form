@@ -1,8 +1,8 @@
-import { sidebar } from "./sidebar";
+import { sidebar } from "../Steps/helpers/sidebar";
 
 export const Sidebar = () => {
   return (
-    <div className="h-full w-80 mr-2">
+    <div className="hidden lg:block h-full w-80 mr-2">
       <div className="bg-[url('../../src/assets/bg-sidebar-desktop.svg')] bg-center h-full bg-no-repeat bg-cover rounded-xl">
         <ul className="pt-10 pl-8 pr-2 text-white text-lg">
           {sidebar.map((item, index) => (
