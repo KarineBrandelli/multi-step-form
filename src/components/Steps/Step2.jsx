@@ -10,31 +10,31 @@ export const Step2 = () => {
   return (
     <>
       <div>
-        <h4 className="font-bold text-4xl text-blue-marine mb-3">
+        <h4 className="font-bold text-2xl lg:text-4xl text-blue-marine mb-3">
           Select Your Plan
         </h4>
-        <p className="text-gray-cool text-lg mb-10">
+        <p className="text-gray-cool lg:text-lg mb-5 lg:mb-10">
           You have the option of monthly or yearly billing.
         </p>
 
         <RadioGroup>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid gap-4 lg:grid-cols-3 lg:gap-8">
             {plansStep2.map((plan, index) => (
               <RadioGroup.Option key={index} value={plan}>
                 {({ active, checked }) => (
                   <div
-                    className={`transition border border-gray-light hover:ring-blue-marine hover:ring-1 p-4 rounded-lg cursor-pointer ${
+                    className={`flex items-center lg:block gap-4 transition border border-gray-light hover:ring-blue-marine hover:ring-1 p-2 lg:p-4 rounded-lg cursor-pointer ${
                       active ? "ring-blue-marine bg-magnolia ring-1" : null
                     } ${
                       checked ? "ring-blue-marine bg-magnolia ring-1" : null
                     }`} >
                     <img src={plan.icon} />
 
-                    <div className="mt-14">
-                      <h3 className="font-medium text-lg text-blue-marine">
+                    <div className="lg:mt-14">
+                      <h3 className="font-medium lg:text-lg text-blue-marine">
                         {plan.name}
                       </h3>
-                      <span className="text-sm text-gray-cool">
+                      <span className="text-xs lg:text-sm text-gray-cool">
                         $ {plan.monthlyPrice}/mon
                       </span>
                     </div>
@@ -46,7 +46,7 @@ export const Step2 = () => {
         </RadioGroup>
 
         <div className="flex justify-center gap-5 mt-8">
-          <span className="font-bold text-blue-marine">Monthly</span>
+          <span className="font-bold text-blue-marine text-sm lg:text-base">Monthly</span>
           <Switch
             checked={enabled}
             onChange={setEnabled}
@@ -58,15 +58,15 @@ export const Step2 = () => {
                 enabled ? "translate-x-6" : "translate-x-1"
               } inline-block h-4 w-4 transform duration-500 ease-in-out rounded-full bg-white transition`} />
           </Switch>
-          <span className="font-bold text-gray-cool">Yearly</span>
+          <span className="font-bold text-gray-cool text-sm lg:text-base">Yearly</span>
         </div>
       </div>
 
       <div className="flex justify-between">
-        <button className="text-gray-cool border-2 rounded-lg w-40 py-3 font-bold hover:text-blue-marine transition">
+        <button className="text-gray-cool border-2 rounded-lg py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold  hover:text-blue-marine transition">
           Go Back
         </button>
-        <button className="bg-blue-purplish text-gray-light rounded-lg w-40 py-3 font-bold hover:opacity-80 transition">
+        <button className="bg-blue-purplish text-gray-light border-2 border-blue-purplish rounded-lg py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold hover:opacity-80 transition">
           Next Step
         </button>
       </div>

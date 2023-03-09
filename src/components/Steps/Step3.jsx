@@ -4,31 +4,31 @@ export const Step3 = () => {
   return (
     <>
       <div className="w-full">
-        <h4 className="font-bold text-4xl text-blue-marine mb-3">
+        <h4 className="font-bold text-2xl lg:text-4xl text-blue-marine mb-3">
           Pick add-ons
         </h4>
-        <p className="text-gray-cool text-lg mb-10">
+        <p className="text-gray-cool lg:text-lg mb-5 lg:mb-10">
           Add-ons help enhance your gaming experience.
         </p>
 
         {plansStep3.map((ao, index) => (
           <div
             key={index}
-            className="px-8 py-6 rounded-xl flex items-center justify-between mb-3 cursor-pointer border-[1px] border-gray-cool hover:ring-2 hover:ring-blue-purplish transition duration-300" >
-            <div className="flex justify-between items-center gap-8">
+            className="px-1 py-2 lg:px-8 lg:py-6 rounded-lg flex items-center justify-between mb-3 cursor-pointer border-[1px] border-gray-cool hover:ring-2 hover:ring-blue-purplish transition duration-300" >
+            <div className="flex justify-between items-center gap-3 lg:gap-8">
               <input
                 value={ao}
                 type="checkbox"
-                className="h-6 w-6 accent-blue-purplish" />
+                className="lg:h-6 lg:w-6 accent-blue-purplish" />
 
               <div>
-                <h3 className="text-blue-marine font-medium text-lg">
+                <h3 className="text-blue-marine font-medium text-sm lg:text-lg">
                   {ao.title}
                 </h3>
-                <span className="text-gray-cool font-normal">{ao.desc}</span>
+                <span className="text-gray-cool text-xs lg:text-base">{ao.desc}</span>
               </div>
             </div>
-            <span className="text-blue-purplish text-sm font-medium">
+            <span className="text-blue-purplish text-xs lg:text-base font-medium">
               +${ao.monthlyPrice}/mon
             </span>
           </div>
@@ -36,10 +36,10 @@ export const Step3 = () => {
       </div>
 
       <div className="flex justify-between">
-        <button className="text-gray-cool border-2 rounded-lg w-40 py-3 font-bold hover:text-blue-marine transition">
+        <button className="text-gray-cool border-2 rounded-lg lg:mt-0 py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold  hover:text-blue-marine transition">
           Go Back
         </button>
-        <button className="bg-blue-purplish text-gray-light rounded-lg w-40 py-3 font-bold hover:opacity-80 transition">
+        <button className="bg-blue-purplish text-gray-light border-2 border-blue-purplish rounded-lg py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold hover:opacity-80 transition">
           Next Step
         </button>
       </div>
