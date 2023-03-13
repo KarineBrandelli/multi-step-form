@@ -23,6 +23,7 @@ export default function App() {
               <Route path="/Step2" element={<Step2 />} />
               <Route path="/Step3" element={<Step3 />} />
               <Route path="/Step4" element={<Step4 />} />
+              <Route path="/Step5" element={<Step5 />} />
             </Routes>
           </div>
         </div>
