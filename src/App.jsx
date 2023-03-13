@@ -15,7 +15,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Header />
-        <div className="flex rounded-xl -mt-24 px-3 py-6 lg:p-2 w-[93%] h-[550px] lg:w-3/4 lg:h-3/4 lg:mt-0 bg-white">
+        <div className="rounded-xl px-3 py-6 w-[93%] h-[550px] lg:flex lg:p-2 lg:w-3/4 lg:h-3/4 lg:mt-0 bg-white -mt-12">
           <Sidebar />
           <div className="mx-auto my-auto w-[98%] h-full lg:px-4 lg:h-[38rem] lg:w-[65%] flex flex-col justify-between">
             <Routes>
