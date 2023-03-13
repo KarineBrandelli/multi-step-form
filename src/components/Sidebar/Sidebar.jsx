@@ -1,27 +1,30 @@
+import { useState } from "react";
+import { Navigation } from "./Navigation";
+import { useResolvedPath } from "react-router-dom";
 import { sidebar } from "../Steps/helpers/sidebar";
 
 export const Sidebar = () => {
+  const { pathname } = useResolvedPath();
+  const [active, setActive] = useState([false, false, false, false]);
+
   return (
-    <div className="hidden lg:block h-full w-80 mr-2">
-      <div className="bg-[url('../../src/assets/bg-sidebar-desktop.svg')] bg-center h-full bg-no-repeat bg-cover rounded-xl">
-        <ul className="pt-10 pl-8 pr-2 text-white text-lg">
-          {sidebar.map((item, index) => (
-            <li key={index} className="mb-8">
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-[50%] border-2 mr-4 font-bold flex items-center justify-center">
-                  {item.stepCounter}
-                </div>
-                <div>
-                  <span className="block text-sm text-gray-light">
-                    STEP {item.stepCounter}
-                  </span>
-                  <span className="text-base font-bold">{item.stepTitle}</span>
-                </div>
-              </div>
-            </li>
-          ))}
+    <>
+      <div className="w-full flex justify-center -mt-24 mb-7 lg:mt-0 lg:h-full lg:w-72 lg:mr-2 lg:block lg:p-0 lg:rounded-xl lg:bg-[url('../../src/assets/bg-sidebar-desktop.svg')] bg-center bg-no-repeat bg-cover">
+        <ul className="flex gap-5 font-medium text-white lg:pt-10 lg:pl-8 lg:pr-2 lg:text-lg lg:block">
+          {sidebar.map((item, index) => {
+            return (
+              <Navigation
+                key={`route-${index}`}
+                route={item.route}
+                isActive={active[index]}
+                onClick={() => handleClick(index)}
+                stepCounter={item.stepCounter}
+                stepTitle={item.stepTitle}
+              />
+            );
+          })}
         </ul>
       </div>
-    </div>
+    </>
   );
 };
