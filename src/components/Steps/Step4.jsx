@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { ConfirmButton } from "../Button/ConfirmButton";
+
 export const Step4 = () => {
   return (
     <>
@@ -24,14 +27,18 @@ export const Step4 = () => {
 
           <div className="flex items-center justify-between pt-4">
             <div className="flex flex-col">
-              <h4 className="text-gray-cool text-xs lg:text-sm">Online service</h4>
+              <h4 className="text-gray-cool text-xs lg:text-sm">
+                Online service
+              </h4>
             </div>
             <span className="text-blue-marine text-sm">+$1/mo</span>
           </div>
 
           <div className="flex items-center justify-between pt-4">
             <div className="flex flex-col">
-              <h4 className="text-gray-cool text-xs lg:text-sm">Larger storage</h4>
+              <h4 className="text-gray-cool text-xs lg:text-sm">
+                Larger storage
+              </h4>
             </div>
             <span className="text-blue-marine text-sm">+$2/mo</span>
           </div>
@@ -39,17 +46,16 @@ export const Step4 = () => {
 
         <div className="w-full flex items-center justify-between px-4">
           <span className="text-gray-cool text-sm">Total (per month)</span>
-          <span className="font-bold text-blue-purplish lg:text-xl">+$12/mon</span>
+          <span className="font-bold text-blue-purplish lg:text-xl">
+            +$12/mon
+          </span>
         </div>
       </div>
 
-      <div className="flex justify-between">
-        <button className="text-gray-cool border-2 rounded-lg lg:mt-0 py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold  hover:text-blue-marine transition">
-          Go Back
-        </button>
-        <button className="bg-blue-purplish text-gray-light border-2 border-blue-purplish rounded-lg py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold hover:opacity-80 transition">
-          Confirm
-        </button>
+      <div className="flex justify-end">
+        <Link to={"/Step5"}>
+          <ConfirmButton />
+        </Link>
       </div>
     </>
   );

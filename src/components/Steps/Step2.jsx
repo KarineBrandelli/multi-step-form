@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Switch } from "@headlessui/react";
 import { RadioGroup } from "@headlessui/react";
+import { GoBackButton } from "../Button/GoBackButton";
+import { NextStepButton } from "../Button/NextStepButton";
 
 import { plansStep2 } from "./helpers/plansStep2";
 
@@ -46,7 +49,9 @@ export const Step2 = () => {
         </RadioGroup>
 
         <div className="flex justify-center gap-5 mt-8">
-          <span className="font-bold text-blue-marine text-sm lg:text-base">Monthly</span>
+          <span className="font-bold text-blue-marine text-sm lg:text-base">
+            Monthly
+          </span>
           <Switch
             checked={enabled}
             onChange={setEnabled}
@@ -58,17 +63,19 @@ export const Step2 = () => {
                 enabled ? "translate-x-6" : "translate-x-1"
               } inline-block h-4 w-4 transform duration-500 ease-in-out rounded-full bg-white transition`} />
           </Switch>
-          <span className="font-bold text-gray-cool text-sm lg:text-base">Yearly</span>
+          <span className="font-bold text-gray-cool text-sm lg:text-base">
+            Yearly
+          </span>
         </div>
       </div>
 
       <div className="flex justify-between">
-        <button className="text-gray-cool border-2 rounded-lg py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold  hover:text-blue-marine transition">
-          Go Back
-        </button>
-        <button className="bg-blue-purplish text-gray-light border-2 border-blue-purplish rounded-lg py-2 lg:py-4 w-24 lg:w-40 text-sm lg:text-base font-bold hover:opacity-80 transition">
-          Next Step
-        </button>
+        <Link to={"/"}>
+          <GoBackButton />
+        </Link>
+        <Link to={"/Step3"}>
+          <NextStepButton />
+        </Link>
       </div>
     </>
   );
