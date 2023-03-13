@@ -21,7 +21,7 @@ npm run dev
 ```
 
 <p align="center">
-  <img alt="App Layout" src="https://user-images.githubusercontent.com/108953489/222528470-374d5474-00a1-4266-b54b-eb607c604b4a.gif" width="80%">
+  <img alt="App Layout" src="" width="80%">
 </p>
 
 ## Tecnologias utilizadas
