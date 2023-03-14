@@ -9,6 +9,14 @@ import { plansStep2 } from "./helpers/plansStep2";
 
 export const Step2 = () => {
   const [enabled, setEnabled] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('');
+
+  function handleClick(planName) {
+    sessionStorage.setItem('plan', planName);
+    setSelectedPlan(planName)
+  }
+
+  console.log(selectedPlan)
 
   return (
     <>
@@ -26,11 +34,14 @@ export const Step2 = () => {
               <RadioGroup.Option key={index} value={plan}>
                 {({ active, checked }) => (
                   <div
+                    onClick={() => handleClick(plan.name)}
+
                     className={`flex items-center lg:block gap-4 transition border border-gray-light hover:ring-blue-marine hover:ring-1 p-2 lg:p-4 rounded-lg cursor-pointer ${
                       active ? "ring-blue-marine bg-magnolia ring-1" : null
                     } ${
                       checked ? "ring-blue-marine bg-magnolia ring-1" : null
                     }`} >
+                      
                     <img src={plan.icon} />
 
                     <div className="lg:mt-14">
