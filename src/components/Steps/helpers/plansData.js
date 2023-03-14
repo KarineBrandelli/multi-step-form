@@ -1,19 +1,19 @@
-export const plansStep3 = [
+export const plansData = [
   {
     title: "Online service",
-    desc: "Access to multiplayer games",
+    description: "Access to multiplayer games",
     monthlyPrice: 1,
     yearlyPrice: 10,
   },
   {
     title: "Larger storage",
-    desc: "Extra 1TB of cloud save",
+    description: "Extra 1TB of cloud save",
     monthlyPrice: 2,
     yearlyPrice: 20,
   },
   {
     title: "Customizable Profile",
-    desc: "Custom theme on your profile",
+    description: "Custom theme on your profile",
     monthlyPrice: 2,
     yearlyPrice: 20,
   },
