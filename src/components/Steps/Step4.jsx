@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { ConfirmButton } from "../Button/ConfirmButton";
 
+import { plansData } from "./helpers/plansData";
+
 export const Step4 = () => {
+  const getPlan = sessionStorage.getItem('plan') || 'Arcade';
+
   return (
     <>
       <div>
@@ -16,11 +20,13 @@ export const Step4 = () => {
           <div className="border-b border-gray-cool flex items-center justify-between">
             <div className="flex flex-col">
               <h3 className="font-bold text-blue-marine lg:text-lg">
-                Arcade (Monthly)
+                {getPlan} (Monthly)
               </h3>
-              <span className="text-gray-cool underline text-sm pb-3 font-bold hover:text-blue-purplish transition cursor-pointer">
-                Change
-              </span>
+              <Link
+                to={"/Step2"}
+                className="text-gray-cool underline text-sm pb-3 font-bold hover:text-blue-purplish transition cursor-pointer">
+                  Change
+              </Link>
             </div>
             <span className="font-bold text-blue-marine">$9/mo</span>
           </div>
