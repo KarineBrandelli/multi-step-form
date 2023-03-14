@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigation } from "./Navigation";
 import { useResolvedPath } from "react-router-dom";
 import { sidebar } from "../Steps/helpers/sidebar";
@@ -7,6 +7,17 @@ export const Sidebar = () => {
   const { pathname } = useResolvedPath();
   const [active, setActive] = useState([false, false, false, false]);
 
+  const routes = ['/', '/Step2', '/Step3', '/Step4']
+
+  useEffect(() => {
+    const currentRoute = routes.indexOf(pathname)    
+    setActive(active.map((_, i) => i === currentRoute))
+  }, [])
+
+  const handleClick = (index) => {
+    setActive(active.map((_, i) => i === index))
+  }
+
   return (
     <>
       <div className="w-full flex justify-center -mt-24 mb-7 lg:mt-0 lg:h-full lg:w-72 lg:mr-2 lg:block lg:p-0 lg:rounded-xl lg:bg-[url('../../src/assets/bg-sidebar-desktop.svg')] bg-center bg-no-repeat bg-cover">
@@ -14,7 +25,7 @@ export const Sidebar = () => {
           {sidebar.map((item, index) => {
             return (
               <Navigation
-                key={`route-${index}`}
+                key={`route-${index + 1}`}
                 route={item.route}
                 isActive={active[index]}
                 onClick={() => handleClick(index)}
