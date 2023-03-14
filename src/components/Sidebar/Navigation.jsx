@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 
-export const Navigation = ({ route, isActive, stepCounter, stepTitle }) => {
+export const Navigation = ({ route, isActive, stepCounter, stepTitle, onClick }) => {
   return (
     <>
       <li className="mb-8">
         <div className="flex items-center">
           <Link to={route}>
             <div
-              className={`border-2 ${
+              onClick={onClick}
+              className={`${
                 isActive
-                  ? " text-blue-marine bg-gradient-to-r from-blue-light to-blue-pastel"
+                  ? " text-blue-marine bg-gradient-to-r from-blue-light to-blue-pastel border-none"
                   : "bg-transparent border-white" }
-                  w-10 h-10 rounded-[50%] lg:mr-4 font-bold flex items-center justify-center cursor-pointer`} >
+                  w-10 h-10 rounded-[50%] lg:mr-4 font-bold flex items-center justify-center cursor-pointer border-2 border-white`} >
               {stepCounter}
             </div>
           </Link>
