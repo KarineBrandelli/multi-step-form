@@ -1,15 +1,22 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { NextStepButton } from "../Button/NextStepButton";
 
 export const Step1 = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
-  const handleRegistration = (data) => console.log(data);
-  const handleError = (errors) => {};
+  } = useForm({
+    mode: "onBlur",
+  });
 
-  console.log(errors);
+  const history = useNavigate();
+
+  const handleRegistration = (data) => {
+    history("/Step2")
+    console.log(data);
+  };
 
   const registerValidation = {
     name: {
@@ -116,7 +123,7 @@ export const Step1 = () => {
 
             <input
               className={`border ${
-                errors.name
+                errors.phone
                   ? "border-red-strawberry"
                   : "border-gray-light focus:border-blue-marine "
               } p-2 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2  outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
