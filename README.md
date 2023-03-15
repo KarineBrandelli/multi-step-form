@@ -15,7 +15,7 @@ Se você deseja clonar esse repositório em sua máquina, certifique-se que voc�
 npm install
 ```
 
-Depois de instalar as dependências, rode o comando:
+Depois de instalar as dependências, para iniciar a aplicação rode o comando:
 ```bash
 npm run dev
 ```
@@ -31,3 +31,5 @@ Tecnologias utilizadas e suas documentações:
 - [Vite](https://vitejs.dev/)
 - [Tailwind](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
+- [React Hook Form](https://react-hook-form.com/)
+- [React Router Dom](https://reactrouter.com/en/main)
