@@ -9,13 +9,20 @@
 
 Você pode acessar a aplicação utilizando um computador, tablet ou celular clicando [nesse]() link.
 
-Se você deseja clonar esse repositório em sua máquina, certifique-se que você tem o `nodejs` instalado e em seguida rode o seguinte comando no terminal para a instalação das dependências:
+Se você deseja clonar esse repositório em sua máquina, certifique-se que você tem o `nodejs` instalado e em seguida rode o seguinte comando no terminal:
+
+```bash
+git clone https://github.com/KarineBrandelli/multi-step-form.git
+```
+
+Em seguida, instale as dependências do projeto rodando o comando:
 
 ```bash
 npm install
 ```
 
-Depois de instalar as dependências, para iniciar a aplicação rode o comando:
+Depois de instalar as dependências, inicie a aplicação com o seguinte comando:
+
 ```bash
 npm run dev
 ```
