@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { GoBackButton } from "../Button/GoBackButton";
 import { NextStepButton } from "../Button/NextStepButton";
 
-import { plansData } from "./helpers/plansData";
+import { plansStep3 } from "./helpers/plansStep3";
 
 export const Step3 = () => {
   return (
@@ -15,7 +15,7 @@ export const Step3 = () => {
           Add-ons help enhance your gaming experience.
         </p>
 
-        {plansData.map((plan, index) => (
+        {plansStep3.map((plan, index) => (
           <div
             key={index}
             className="px-1 py-2 lg:px-8 lg:py-6 rounded-lg flex items-center justify-between mb-3 cursor-pointer border-[1px] border-gray-cool hover:ring-[1px] hover:ring-blue-purplish hover:border-[1px] hover:border-blue-purplish transition duration-300" >
