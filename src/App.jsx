@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 
 import { Header } from "./components/Header/Header";
 import { Sidebar } from "./components/Sidebar/Sidebar";
@@ -13,7 +13,7 @@ import "./index.css";
 export default function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <div className="rounded-xl px-3 py-6 w-[93%] h-[550px] lg:flex lg:p-2 lg:w-3/4 lg:h-3/4 lg:mt-0 bg-white -mt-12">
           <Sidebar />
@@ -27,7 +27,7 @@ export default function App() {
             </Routes>
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
