@@ -22,7 +22,6 @@ export const Sidebar = () => {
             return (
               <Navigation
                 key={`route-${index + 1}`}
-                route={item.route}
                 isActive={active[index]}
                 stepCounter={item.stepCounter}
                 stepTitle={item.stepTitle}
