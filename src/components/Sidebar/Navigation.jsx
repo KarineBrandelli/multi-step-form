@@ -5,7 +5,6 @@ export const Navigation = ({ route, isActive, stepCounter, stepTitle, onClick })
     <>
       <li className="mb-8">
         <div className="flex items-center">
-          <Link to={route}>
             <div
               onClick={onClick}
               className={`${
@@ -16,7 +15,6 @@ export const Navigation = ({ route, isActive, stepCounter, stepTitle, onClick })
                   w-10 h-10 rounded-[50%] lg:mr-4 font-bold flex items-center justify-center border-2 border-white`} >
             {stepCounter}
           </div>
-          </Link>
           <div className="hidden lg:block">
             <span className="block text-sm text-gray-light">
               STEP {stepCounter}
