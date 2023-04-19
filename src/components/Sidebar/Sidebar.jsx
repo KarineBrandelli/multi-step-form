@@ -12,7 +12,7 @@ export const Sidebar = () => {
   useEffect(() => {
     const currentRoute = routes.indexOf(pathname)    
     setActive(active.map((_, i) => i === currentRoute))
-  }, [])
+  }, [pathname])
 
   return (
     <>
