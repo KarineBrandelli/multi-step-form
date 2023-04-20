@@ -21,10 +21,10 @@ export const Step2 = () => {
   return (
     <>
       <div>
-        <h4 className="font-bold text-2xl lg:text-4xl text-blue-marine mb-3">
+        <h4 className="font-bold text-2xl lg:text-4xl text-blue-marine mb-3 text-center min-[425px]:text-left">
           Select Your Plan
         </h4>
-        <p className="text-gray-cool lg:text-lg mb-5 lg:mb-10">
+        <p className="text-gray-cool text-sm lg:text-lg mb-5 lg:mb-10 text-center min-[425px]:text-left">
           You have the option of monthly or yearly billing.
         </p>
 
