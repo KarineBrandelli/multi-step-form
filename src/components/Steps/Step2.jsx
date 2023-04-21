@@ -51,8 +51,11 @@ export const Step2 = () => {
                       <h3 className="font-medium lg:text-lg text-blue-marine">
                         {plan.name}
                       </h3>
-                      <span className="text-xs lg:text-sm text-gray-cool">
-                        $ {plan.monthlyPrice}/mon
+                      <span className="text-sm text-gray-cool">
+                        $
+                        {period === "monthly"
+                          ? `${plan.monthlyPrice}/month`
+                          : `${plan.yearlyPrice}/year`}
                       </span>
                     </div>
                   </div>
@@ -62,22 +65,39 @@ export const Step2 = () => {
           </div>
         </RadioGroup>
 
-        <div className="flex justify-center gap-5 mt-8">
-          <span className="font-bold text-blue-marine text-sm lg:text-base">
+        <div className="flex justify-center items-center gap-2 sm:gap-5 mt-8">
+          <span
+            className={`font-bold text-sm lg:text-base transition duration-500 ease-in-out ${
+              period === "monthly" ? "text-blue-marine" : "text-gray-cool "
+            } `}
+          >
             Monthly
           </span>
+
           <Switch
-            checked={enabled}
-            onChange={setEnabled}
-            className={`${
-              enabled ? "bg-gray-cool" : "bg-blue-marine"
-            } relative inline-flex h-6 w-11 items-center rounded-full`} >
+            checked={period === "monthly" ? false : true}
+            onChange={() => {
+              if (period === "monthly") {
+                setPeriod("yearly");
+              }
+              if (period === "yearly") {
+                setPeriod("monthly");
+              }
+            }}
+            className="bg-blue-marine relative inline-flex h-5 w-9 items-center rounded-full"
+          >
             <span
               className={`${
-                enabled ? "translate-x-6" : "translate-x-1"
-              } inline-block h-4 w-4 transform duration-500 ease-in-out rounded-full bg-white transition`} />
+                period === "yearly" ? "translate-x-5" : "translate-x-1"
+              } inline-block h-3 w-3 transform duration-500 ease-in-out rounded-full bg-white transition`}
+            />
           </Switch>
-          <span className="font-bold text-gray-cool text-sm lg:text-base">
+
+          <span
+            className={`font-bold text-sm lg:text-base transition duration-500 ease-in-out ${
+              period === "yearly" ? "text-blue-marine" : "text-gray-cool "
+            } `}
+          >
             Yearly
           </span>
         </div>
