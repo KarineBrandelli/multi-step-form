@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Switch } from "@headlessui/react";
 import { RadioGroup } from "@headlessui/react";
 import { GoBackButton } from "../Button/GoBackButton";
 import { NextStepButton } from "../Button/NextStepButton";
+import { AppContext } from "../../context/AppContext";
 
 import { plansStep2 } from "./helpers/plansStep2";
 
