@@ -9,8 +9,10 @@ import { AppContext } from "../../context/AppContext";
 import { plansStep2 } from "./helpers/plansStep2";
 
 export const Step2 = () => {
-  const [enabled, setEnabled] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('');
+  const {
+    period,
+    setPeriod,
+  } = useContext(AppContext);
 
   function handleClick(planName) {
     sessionStorage.setItem('plan', planName);
