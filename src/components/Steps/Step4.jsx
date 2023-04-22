@@ -17,7 +17,7 @@ export const Step4 = () => {
         </p>
 
         <div className="bg-magnolia p-4 rounded-lg mb-6">
-          <div className="border-b border-gray-cool flex items-center justify-between">
+          <div className="border-b border-gray-cool flex items-center justify-between pb-3">
             <div className="flex flex-col">
               <h3 className="font-bold text-blue-marine lg:text-lg">
                 {getPlan} (Monthly)
