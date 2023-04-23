@@ -19,8 +19,9 @@ export const Step1 = () => {
   const history = useNavigate();
 
   const handleRegistration = (data) => {
-    history("/Step2")
-    console.log(data);
+    history("/Step2");
+
+    setUserInfo(data)
   };
 
   const registerValidation = {
