@@ -62,12 +62,14 @@ export const Step1 = () => {
           <div className="flex flex-col mb-6">
             <label
               htmlFor="name"
-              className="lg:text-lg flex justify-between items-center" >
+              className="lg:text-lg flex justify-between items-center"
+            >
               Name
               {errors.name && (
                 <p
                   className="text-red-strawberry text-sm font-medium"
-                  role="alert" >
+                  role="alert"
+                >
                   {errors.name?.message}
                 </p>
               )}
@@ -83,18 +85,21 @@ export const Step1 = () => {
               type="text"
               placeholder="Stephen Hawking"
               {...register("name", registerValidation.name)}
-              aria-invalid={errors.name ? "true" : "false"} />
+              aria-invalid={errors.name ? "true" : "false"}
+            />
           </div>
 
           <div className="flex flex-col mb-5">
             <label
               htmlFor="email"
-              className="lg:text-lg flex justify-between items-center" >
+              className="lg:text-lg flex justify-between items-center"
+            >
               Email
               {errors.email && (
                 <p
                   className="text-red-strawberry text-sm font-medium"
-                  role="alert" >
+                  role="alert"
+                >
                   {errors.email?.message}
                 </p>
               )}
@@ -110,18 +115,21 @@ export const Step1 = () => {
               type="text"
               placeholder="stephenhawking@domain.com"
               {...register("email", registerValidation.email)}
-              aria-invalid={errors.email ? "true" : "false"} />
+              aria-invalid={errors.email ? "true" : "false"}
+            />
           </div>
 
           <div className="flex flex-col mb-5">
             <label
               htmlFor="phone"
-              className="lg:text-lg flex justify-between items-center" >
+              className="lg:text-lg flex justify-between items-center"
+            >
               Phone Number
               {errors.phone && (
                 <p
                   className="text-red-strawberry text-sm font-medium"
-                  role="alert" >
+                  role="alert"
+                >
                   {errors.phone?.message}
                 </p>
               )}
@@ -137,7 +145,8 @@ export const Step1 = () => {
               type="text"
               placeholder="00 00000-0000"
               {...register("phone", registerValidation.phone)}
-              aria-invalid={errors.phone ? "true" : "false"} />
+              aria-invalid={errors.phone ? "true" : "false"}
+            />
           </div>
         </div>
       </form>
