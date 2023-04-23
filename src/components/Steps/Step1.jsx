@@ -1,5 +1,8 @@
+import { useContext } from "react";
+
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
 import { NextStepButton } from "../Button/NextStepButton";
 
 export const Step1 = () => {
