@@ -6,6 +6,8 @@ import { AppContext } from "../../context/AppContext";
 import { NextStepButton } from "../Button/NextStepButton";
 
 export const Step1 = () => {
+  const { setUserInfo } = useContext(AppContext);
+
   const {
     register,
     handleSubmit,
