@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export const AppContext = React.createContext();
 
 export function AppContextProvider({ children }) {
+  const [userInfo, setUserInfo] = useState({});
   const [period, setPeriod] = useState("monthly");
 
   const getPlan = JSON.parse(sessionStorage.getItem("plan"));
