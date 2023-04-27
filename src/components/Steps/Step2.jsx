@@ -11,17 +11,8 @@ import { AppContext } from "../../context/AppContext";
 import { plansStep2 } from "./helpers/plansStep2";
 
 export const Step2 = () => {
-  const {
-    period,
-    setPeriod,
-  } = useContext(AppContext);
-
-  function handleClick(planName) {
-    sessionStorage.setItem('plan', planName);
-    setSelectedPlan(planName)
-  }
-
-  console.log(selectedPlan)
+  const { selectedPlan, setSelectedPlan, period, setPeriod } =
+    useContext(AppContext);
 
   return (
     <>
