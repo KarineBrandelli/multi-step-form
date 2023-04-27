@@ -35,7 +35,7 @@ export const Step2 = () => {
         <RadioGroup>
           <div className="grid gap-4 lg:grid-cols-3 lg:gap-8">
             {plansStep2.map((plan, index) => (
-              <RadioGroup.Option key={index} value={plan}>
+              <RadioGroup.Option key={index} value={plan} as={Fragment}>
                 {({ active, checked }) => (
                   <div
                     onClick={() => handleClick(plan.name)}
