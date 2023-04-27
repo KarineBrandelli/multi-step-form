@@ -24,7 +24,7 @@ export const Step2 = () => {
           You have the option of monthly or yearly billing.
         </p>
 
-        <RadioGroup>
+        <RadioGroup value={selectedPlan} onChange={setSelectedPlan}>
           <div className="grid gap-4 lg:grid-cols-3 lg:gap-8">
             {plansStep2.map((plan, index) => (
               <RadioGroup.Option key={index} value={plan} as={Fragment}>
