@@ -8,7 +8,7 @@ export function AppContextProvider({ children }) {
   const [selectedPlan, setSelectedPlan] = useState(plansStep2[0]);
   const [period, setPeriod] = useState("monthly");
   const [selectedPlanAdds, setSelectedPlanAdds] = useState([]);
-
+  
   const CalcPlansTotal = () => {
     let plansTotalValue =
       period === "monthly"
@@ -27,8 +27,15 @@ export function AppContextProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
+        userInfo,
+        setUserInfo,
+        selectedPlan,
+        setSelectedPlan,
         period,
-        setPeriod
+        setPeriod,
+        selectedPlanAdds,
+        setSelectedPlanAdds,
+        CalcPlansTotal,
       }}
     >
       {children}
