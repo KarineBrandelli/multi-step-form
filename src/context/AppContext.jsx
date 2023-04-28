@@ -9,7 +9,20 @@ export function AppContextProvider({ children }) {
   const [period, setPeriod] = useState("monthly");
   const [selectedPlanAdds, setSelectedPlanAdds] = useState([]);
 
-  const getPlan = JSON.parse(sessionStorage.getItem("plan"));
+  const CalcPlansTotal = () => {
+    let plansTotalValue =
+      period === "monthly"
+        ? selectedPlan.monthlyPrice
+        : selectedPlan.yearlyPrice;
+    if (selectedPlanAdds.length > 0) {
+      selectedPlanAdds.map((adds) =>
+        period === "monthly"
+          ? (plansTotalValue += adds.monthlyPrice)
+          : (plansTotalValue += adds.yearlyPrice)
+      );
+    }
+    return plansTotalValue;
+  };
 
   return (
     <AppContext.Provider
