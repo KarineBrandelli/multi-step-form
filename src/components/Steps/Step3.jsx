@@ -1,4 +1,7 @@
+import { useContext } from "react";
+
 import { Link } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
 import { GoBackButton } from "../Button/GoBackButton";
 import { NextStepButton } from "../Button/NextStepButton";
 
