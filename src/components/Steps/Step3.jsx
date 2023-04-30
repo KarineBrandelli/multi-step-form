@@ -8,6 +8,21 @@ import { NextStepButton } from "../Button/NextStepButton";
 import { plansStep3 } from "./helpers/plansStep3";
 
 export const Step3 = () => {
+  const { selectedPlanAdds, setSelectedPlanAdds, period } =
+    useContext(AppContext);
+
+  const handleChange = (event, selectedAdds) => {
+    let addsList = [...selectedPlanAdds];
+    if (event.target.checked) {
+      addsList = [...selectedPlanAdds, selectedAdds];
+    } else {
+      addsList.splice(selectedPlanAdds.indexOf(selectedAdds), 1);
+    }
+    setSelectedPlanAdds(addsList);
+  };
+
+  const isChecked = (item) => selectedPlanAdds.includes(item);
+
   return (
     <>
       <div className="w-full">
