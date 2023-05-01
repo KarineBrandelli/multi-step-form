@@ -26,8 +26,9 @@ export const Step4 = () => {
               </h3>
               <Link
                 to={"/Step2"}
-                className="text-gray-cool underline text-sm pb-3 font-bold hover:text-blue-purplish transition cursor-pointer">
-                  Change
+                className="text-gray-cool underline text-xs sm:text-sm font-bold hover:text-blue-purplish transition cursor-pointer"
+              >
+                Change
               </Link>
             </div>
             <span className="font-bold text-blue-marine">$9/mo</span>
