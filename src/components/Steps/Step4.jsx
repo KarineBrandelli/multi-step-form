@@ -34,7 +34,12 @@ export const Step4 = () => {
                 Change
               </Link>
             </div>
-            <span className="font-bold text-blue-marine">$9/mo</span>
+            <span className="font-bold text-blue-marine">
+              $
+              {period === "monthly"
+                ? `${selectedPlan.monthlyPrice}/mon`
+                : `${selectedPlan.yearlyPrice}/yr`}
+            </span>
           </div>
 
           <div className="flex items-center justify-between pt-4">
