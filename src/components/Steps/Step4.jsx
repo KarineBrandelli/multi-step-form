@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import { ConfirmButton } from "../Button/ConfirmButton";
 
-import { plansData } from "./helpers/plansData";
-
 export const Step4 = () => {
   const { selectedPlan, period, selectedPlanAdds, CalcPlansTotal } =
     useContext(AppContext);
