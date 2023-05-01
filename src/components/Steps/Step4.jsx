@@ -22,7 +22,10 @@ export const Step4 = () => {
           <div className="border-b border-gray-cool flex items-center justify-between pb-3">
             <div className="flex flex-col">
               <h3 className="font-bold text-blue-marine lg:text-lg">
-                {getPlan} (Monthly)
+                {selectedPlan.name}{" "}
+                <span className="text-sm sm:text-base">
+                  ({period === "monthly" ? "Monthly" : "Yearly"})
+                </span>
               </h3>
               <Link
                 to={"/Step2"}
