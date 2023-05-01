@@ -33,27 +33,35 @@ export const Step3 = () => {
           Add-ons help enhance your gaming experience.
         </p>
 
-        {plansStep3.map((plan, index) => (
+        {plansStep3.map((adds, index) => (
           <div
             key={index}
-            className="px-1 py-2 lg:px-8 lg:py-6 rounded-lg flex items-center justify-between mb-3 cursor-pointer border-[1px] border-gray-cool hover:ring-[1px] hover:ring-blue-purplish hover:border-[1px] hover:border-blue-purplish transition duration-300" >
+            className={`${
+              isChecked(adds) ? "active-checkbox" : "not-checked-item"
+            }  p-2 lg:px-8 lg:py-6 rounded-lg flex items-center justify-between mb-3 cursor-pointer border-[1px] border-gray-cool hover:ring-[1px] hover:ring-blue-purplish hover:border-[1px] hover:border-blue-purplish transition duration-300`}
+          >
             <div className="flex justify-between items-center gap-3 lg:gap-8">
               <input
-                value={plan}
+                value={adds}
                 type="checkbox"
-                className="lg:h-6 lg:w-6 accent-blue-purplish" />
+                className="lg:h-6 lg:w-6 accent-blue-purplish"
+                onChange={(event) => handleChange(event, adds)}
+                checked={isChecked(adds)}
+              />
 
               <div>
                 <h3 className="text-blue-marine font-medium text-sm lg:text-lg">
-                  {plan.title}
+                  {adds.title}
                 </h3>
                 <span className="text-gray-cool text-xs lg:text-base">
-                  {plan.description}
+                  {adds.description}
                 </span>
               </div>
             </div>
             <span className="text-blue-purplish text-xs lg:text-base font-medium">
-              +${plan.monthlyPrice}/mon
+              {period === "monthly"
+                ? `+$${adds.monthlyPrice}/mon`
+                : `+$${adds.yearlyPrice}/yr`}
             </span>
           </div>
         ))}
