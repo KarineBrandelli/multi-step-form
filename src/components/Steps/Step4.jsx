@@ -5,7 +5,7 @@ import { AppContext } from "../../context/AppContext";
 import { ConfirmButton } from "../Button/ConfirmButton";
 
 export const Step4 = () => {
-  const { selectedPlan, period, selectedPlanAdds, CalcPlansTotal } =
+  const { userInfo, selectedPlan, period, selectedPlanAdds, CalcPlansTotal } =
     useContext(AppContext);
 
   return (
