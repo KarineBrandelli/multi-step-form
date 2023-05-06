@@ -42,23 +42,21 @@ export const Step4 = () => {
             </span>
           </div>
 
-          <div className="flex items-center justify-between pt-4">
-            <div className="flex flex-col">
-              <h4 className="text-gray-cool text-xs lg:text-sm">
-                Online service
-              </h4>
+          {selectedPlanAdds.map((item, index) => (
+            <div key={index} className="flex items-center justify-between pt-4">
+              <div className="flex flex-col">
+                <h4 className="text-gray-cool text-xs lg:text-sm">
+                  {item.title}
+                </h4>
+              </div>
+              <span className="text-blue-marine text-xs">
+                +$
+                {period === "monthly"
+                  ? `${item.monthlyPrice}/mon`
+                  : `${item.yearlyPrice}/yr`}
+              </span>
             </div>
-            <span className="text-blue-marine text-sm">+$1/mo</span>
-          </div>
-
-          <div className="flex items-center justify-between pt-4">
-            <div className="flex flex-col">
-              <h4 className="text-gray-cool text-xs lg:text-sm">
-                Larger storage
-              </h4>
-            </div>
-            <span className="text-blue-marine text-sm">+$2/mo</span>
-          </div>
+          ))}
         </div>
 
         <div className="w-full flex items-center justify-between px-4">
