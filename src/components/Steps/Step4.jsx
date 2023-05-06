@@ -93,7 +93,7 @@ export const Step4 = () => {
       </div>
 
       <div className="flex justify-end">
-        <Link to={"/Step5"}>
+        <Link to={"/Step5"} onClick={sendData}>
           <ConfirmButton />
         </Link>
       </div>
