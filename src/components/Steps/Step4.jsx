@@ -8,6 +8,27 @@ export const Step4 = () => {
   const { userInfo, selectedPlan, period, selectedPlanAdds, CalcPlansTotal } =
     useContext(AppContext);
 
+  function sendData() {
+    let getUser = JSON.parse(localStorage.getItem("user")) || [];
+
+    const newUser = {
+      name: userInfo.name,
+      email: userInfo.email,
+      phone: userInfo.phone,
+      planName: selectedPlan.name,
+      billing: period,
+      addons: selectedPlanAdds,
+      userTotal: CalcPlansTotal(),
+    };
+
+    if (getUser.some((user) => user.email === newUser.email)) {
+      alert("Ops! This email is already in our database.");
+    } else {
+      getUser.push(newUser);
+      localStorage.setItem("user", JSON.stringify(getUser));
+    }
+  }
+
   return (
     <>
       <div>
