@@ -60,9 +60,13 @@ export const Step4 = () => {
         </div>
 
         <div className="w-full flex items-center justify-between px-4">
-          <span className="text-gray-cool text-sm">Total (per month)</span>
-          <span className="font-bold text-blue-purplish lg:text-xl">
-            +$12/mon
+          <span className="text-gray-cool text-sm">
+            Total (per {period === "monthly" ? "month" : "year"})
+          </span>
+          <span className="font-bold text-blue-purplish lg:text-lg">
+            +$
+            {CalcPlansTotal()}
+            {period === "monthly" ? `/mon` : `/yr`}
           </span>
         </div>
       </div>
