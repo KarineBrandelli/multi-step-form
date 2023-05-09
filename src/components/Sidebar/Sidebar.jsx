@@ -16,7 +16,7 @@ export const Sidebar = () => {
 
   return (
     <>
-      <div className="w-full flex justify-center -mt-24 mb-7 lg:mt-0 lg:h-full lg:w-72 lg:mr-2 lg:block lg:p-0 lg:rounded-xl lg:bg-[url('../../src/assets/bg-sidebar-desktop.svg')] bg-center bg-no-repeat bg-cover">
+      <div className="w-full flex justify-center -mt-24 mb-7 lg:mt-0 lg:h-full lg:w-72 lg:mr-2 lg:block lg:p-0 lg:rounded-xl lg:bg-[url('https://user-images.githubusercontent.com/108953489/236943000-231b3139-bd0f-44e2-b9ab-8699536842af.svg')] bg-center bg-no-repeat bg-cover">
         <ul className="flex gap-5 font-medium text-white lg:pt-10 lg:pl-8 lg:pr-2 lg:text-lg lg:block">
           {sidebar.map((item, index) => {
             return (
