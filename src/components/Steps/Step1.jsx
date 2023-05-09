@@ -58,7 +58,7 @@ export const Step1 = () => {
             Please provide your name, email address, and phone number.
           </p>
 
-          <div className="flex flex-col mb-6">
+          <div className="flex flex-col mb-4 lg:mb-6">
             <label
               htmlFor="name"
               className="lg:text-lg flex justify-between items-center"
@@ -79,7 +79,7 @@ export const Step1 = () => {
                 errors.name
                   ? "border-red-strawberry"
                   : "border-gray-light focus:border-blue-marine "
-              } p-2 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2  outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
+              } p-2.5 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2 outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
               id="name"
               type="text"
               placeholder="Stephen Hawking"
@@ -109,7 +109,7 @@ export const Step1 = () => {
                 errors.email
                   ? "border-red-strawberry"
                   : "border-gray-light focus:border-blue-marine "
-              } p-2 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2  outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
+              } p-2.5 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2 outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
               id="email"
               type="text"
               placeholder="stephenhawking@domain.com"
@@ -139,7 +139,7 @@ export const Step1 = () => {
                 errors.phone
                   ? "border-red-strawberry"
                   : "border-gray-light focus:border-blue-marine "
-              } p-2 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2  outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
+              } p-2.5 lg:p-4 mt-2 text-sm lg:text-base rounded-lg border-2 outline-none focus:outline-none transition focus:duration-500 ease-in-out`}
               id="phone"
               type="text"
               placeholder="00 00000-0000"
