@@ -7,7 +7,7 @@
 ------
 ## Como acessar a página?
 
-Você pode acessar a aplicação utilizando um computador, tablet ou celular clicando [nesse]() link.
+Você pode acessar a aplicação utilizando um computador, tablet ou celular clicando [nesse](https://multi-step-form-zeta-five.vercel.app/) link.
 
 Se você deseja clonar esse repositório em sua máquina, certifique-se que você tem o `nodejs` instalado e em seguida rode o seguinte comando no terminal:
 
@@ -28,7 +28,7 @@ npm run dev
 ```
 
 <p align="center">
-  <img alt="App Layout" src="" width="80%">
+  <img alt="App Layout" src="https://user-images.githubusercontent.com/108953489/236941855-ebfd661d-5d4f-4832-a74e-ea3c9e137e3d.gif" width="80%">
 </p>
 
 ## Tecnologias utilizadas
