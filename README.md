@@ -1,7 +1,7 @@
 <h1 align="center"> Multi Step Form </h1>
 
 <p align="center">
-  Uma aplicação web de um formulário de etapas desenvolvido com React.js.
+  Uma aplicação web de um formulário com múltiplas etapas desenvolvido com React.js.
 </p>
 
 ------
@@ -36,7 +36,7 @@ npm run dev
 Tecnologias utilizadas e suas documentações:
 
 - [Vite](https://vitejs.dev/)
-- [Tailwind](https://tailwindcss.com/)
+- [Tailwindcss](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
 - [React Hook Form](https://react-hook-form.com/)
 - [React Router Dom](https://reactrouter.com/en/main)
