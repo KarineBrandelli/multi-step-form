@@ -1,3 +1,5 @@
+import Clarity from "@microsoft/clarity";
+import { useEffect } from "react";
 import { Route, Routes, HashRouter } from "react-router-dom";
 
 import { Header } from "./components/Header/Header";
@@ -7,13 +9,20 @@ import { Step2 } from "./components/Steps/Step2";
 import { Step3 } from "./components/Steps/Step3";
 import { Step4 } from "./components/Steps/Step4";
 import { Step5 } from "./components/Steps/Step5";
-import Clarity from "@microsoft/clarity";
 
 import "./index.css";
 
 Clarity.init("r0efgij232");
 
 export default function App() {
+  useEffect(() => {
+    Clarity.consent();
+
+    Clarity.setTag("user_id", "25-05-1995");
+    Clarity.setTag("user_email", "karinebrandellipadilha@gmail.com");
+    Clarity.setTag("user_name", "karine brandelli");
+  }, []);
+
   return (
     <>
       <HashRouter>
