@@ -7,8 +7,11 @@ import { Step2 } from "./components/Steps/Step2";
 import { Step3 } from "./components/Steps/Step3";
 import { Step4 } from "./components/Steps/Step4";
 import { Step5 } from "./components/Steps/Step5";
+import Clarity from "@microsoft/clarity";
 
 import "./index.css";
+
+Clarity.init("r0efgij232");
 
 export default function App() {
   return (
